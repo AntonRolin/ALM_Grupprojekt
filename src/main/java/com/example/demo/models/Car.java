@@ -9,8 +9,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Car {
     String id;
-    String name;
+    String manufacturer;
+    String model;
+    String color;
     String licensePlate;
+    int productionyear;
     boolean cleantitle;
     boolean forSale;
 }

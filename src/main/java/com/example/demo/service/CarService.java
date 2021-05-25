@@ -26,7 +26,7 @@ public class CarService {
 
         // returnerar endast Food namnen i en lista
         return selableCar.stream()
-                .map(Car::getName)
+                .map(Car::getManufacturer)
                 .collect(Collectors.toList());
     }
 }
