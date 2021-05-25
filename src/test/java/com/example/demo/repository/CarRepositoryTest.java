@@ -30,13 +30,13 @@ public class CarRepositoryTest {
         String expectedLicensePlate = "MLB88L";
 
         Car savingCar = new Car();
-        savingCar.setName(expectedCarName);
+        savingCar.setManufacturer(expectedCarName);
         savingCar.setLicensePlate(expectedLicensePlate);
 
         carRepository.save(savingCar);
         // ---------------------------
 
-        boolean actual = carRepository.existsCarByNameIgnoreCaseAndLicensePlateIgnoreCase(expectedLicensePlate, expectedCarName);
+        boolean actual = carRepository.existsCarByManufacturerIgnoreCaseAndLicensePlateIgnoreCase(expectedLicensePlate, expectedCarName);
 
         // ---------------------------
 
@@ -51,7 +51,7 @@ public class CarRepositoryTest {
 
         // ---------------------------
 
-        boolean actual = carRepository.existsCarByNameIgnoreCaseAndLicensePlateIgnoreCase(expectedCarName, expectedLicensePlate);
+        boolean actual = carRepository.existsCarByManufacturerIgnoreCaseAndLicensePlateIgnoreCase(expectedCarName, expectedLicensePlate);
 
         // ---------------------------
 
