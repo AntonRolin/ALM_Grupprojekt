@@ -22,7 +22,7 @@ public class CarService {
 
     public List<String> getCarsForSale() {
         // hämtar alla Cars som är till försäljning
-        List<Car> selableCar = repository.findCarByforSale(true);
+        List<Car> selableCar = repository.findCarByforSaleAndCleanTitle(true, true);
 
         // returnerar endast Food namnen i en lista
         return selableCar.stream()
