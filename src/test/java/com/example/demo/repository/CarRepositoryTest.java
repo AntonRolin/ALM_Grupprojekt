@@ -3,6 +3,7 @@ package com.example.demo.repository;
 
 import com.example.demo.models.Car;
 import com.example.demo.repositories.CarRepository;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -26,8 +27,8 @@ public class CarRepositoryTest {
 
     @Test
     void existsBookByAuthorIgnoreCaseAndTitleIgnoreCase() {
-        String expectedCarName = "Volvo";
-        String expectedLicensePlate = "MLB88L";
+        String expectedCarName = "BMW";
+        String expectedLicensePlate = "MLB23C";
 
         Car savingCar = new Car();
         savingCar.setManufacturer(expectedCarName);
