@@ -10,10 +10,11 @@ import lombok.NoArgsConstructor;
 public class Car {
     String id;
     String manufacturer;
-    String model;
-    String color;
     String licensePlate;
     int productionyear;
     boolean cleantitle;
     boolean forSale;
+    String model;
+    String color;
+    int productionyear;
 }

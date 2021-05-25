@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface CarRepository extends MongoRepository<Car, String> {
     List<Car> findCarByforSale(boolean forSale);
-    boolean existsCarByNameIgnoreCaseAndLicensePlateIgnoreCase(String author, String title);
+    boolean existsCarByManufacturerIgnoreCaseAndLicensePlateIgnoreCase(String author, String title);
 }

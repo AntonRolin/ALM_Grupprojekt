@@ -32,11 +32,10 @@ public class CarRepositoryTest {
         carRepository.save(savingCar);
         // ---------------------------
 
-        boolean actual = carRepository.existsCarByNameIgnoreCaseAndLicensePlateIgnoreCase(expectedLicensePlate, expectedCarName);
+        boolean actual = carRepository.existsCarByManufacturerIgnoreCaseAndLicensePlateIgnoreCase(expectedLicensePlate, expectedCarName);
 
         // ---------------------------
 
         assertTrue(actual);
     }
-
 }
