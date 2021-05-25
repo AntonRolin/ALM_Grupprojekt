@@ -36,34 +36,29 @@ public class CarRepositoryTest {
         savingCar.setLicensePlate(expectedLicensePlate);
 
         carRepository.save(savingCar);
-        // ---------------------------
 
         boolean actual = carRepository.existsCarByManufacturerIgnoreCaseAndLicensePlateIgnoreCase(expectedCarName, expectedLicensePlate);
+        boolean actual2 = carRepository.existsCarByManufacturerIgnoreCaseAndLicensePlateIgnoreCase("Volvo", "BNK12C");
 
-        // ---------------------------
 
         assertTrue(actual);
+        assertFalse(actual2);
     }
 
 
     @Test
     void findCarByforSaleAndCleanTitle() {
         String expectedLicensePlate = "VLB23C";
-        boolean expectedCleantitle = true;
         boolean expectedForSale = true;
 
         Car carOne = new Car();
         carOne.setLicensePlate(expectedLicensePlate);
-        carOne.setCleantitle(expectedCleantitle);
         carOne.setForSale(expectedForSale);
 
-
-
         carRepository.save(carOne);
+        List<Car> actual = carRepository.findCarByforSale(true);
 
-        List<Car> actual = carRepository.findCarByforSaleAndCleanTitle(true, true);
-
-        assertEquals(carOne.getLicensePlate(), actual.get(0).getLicensePlate());
+        assertEquals(Collections.singletonList(carOne), actual);
 
 
     }

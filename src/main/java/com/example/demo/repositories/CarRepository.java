@@ -9,7 +9,7 @@ import java.util.UUID;
 
 @Repository
 public interface CarRepository extends MongoRepository<Car, Long> {
-    List<Car> findCarByforSaleAndCleanTitle(boolean forSale, boolean cleantitle);
+    List<Car> findCarByforSale(boolean forSale);
     boolean existsCarByManufacturerIgnoreCaseAndLicensePlateIgnoreCase(String manufacturer, String licensePlate);
 }
 
