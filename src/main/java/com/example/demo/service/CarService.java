@@ -30,5 +30,18 @@ public class CarService {
                 .collect(Collectors.toList());
     }
 
+    public int getPrice(Car car, int year){
+        double initialPrice = car.getInitialPrice();
+        int productionyear = car.getProductionyear();
+        int carAge = year - productionyear;
+        double price = initialPrice;
 
+        if(carAge > 0){
+            for (int i = 0; i < carAge; i++) {
+                    price = price*0.9;
+            }
+        }
+
+        return (int)price;
+    }
 }
