@@ -12,6 +12,7 @@ public class Car {
     String manufacturer;
     String licensePlate;
     int productionyear;
+    int initialPrice;
     boolean cleantitle;
     boolean forSale;
     String model;
