@@ -16,5 +16,4 @@ public class Car {
     boolean forSale;
     String model;
     String color;
-    int productionyear;
 }
