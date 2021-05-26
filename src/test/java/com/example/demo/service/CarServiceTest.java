@@ -5,23 +5,27 @@ import com.example.demo.repositories.CarRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+
+@ExtendWith(MockitoExtension.class)
 public class CarServiceTest {
     CarService carService;
 
-    @Autowired
+    @Mock
     CarRepository carRepository;
 
     @BeforeEach
-    public void init(){
+    public void init() {
         carService = new CarService(carRepository);
     }
 
     @Test
-    public void getPrice(){
+    public void getPrice() {
         int initialPrice = 100000;
         int productionyear = 2015;
 
@@ -36,7 +40,7 @@ public class CarServiceTest {
 
     @Test
     @DisplayName("Negative year difference returns initial price")
-    public void getPriceNegativeAge(){
+    public void getPriceNegativeAge() {
         int initialPrice = 50000;
         int productionyear = 2010;
 
