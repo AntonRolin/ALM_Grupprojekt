@@ -20,7 +20,6 @@ public class CarService {
         repository.save(car);
     }
 
-
     public int getPrice(Car car, int year) {
         double initialPrice = car.getInitialPrice();
         int productionyear = car.getProductionyear();
