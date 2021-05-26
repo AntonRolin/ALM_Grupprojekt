@@ -1,11 +1,11 @@
 package com.example.demo.service;
+
 import com.example.demo.models.Car;
 import com.example.demo.repositories.CarRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Service
@@ -21,18 +21,18 @@ public class CarService {
     }
 
 
-    public int getPrice(Car car, int year){
+    public int getPrice(Car car, int year) {
         double initialPrice = car.getInitialPrice();
         int productionyear = car.getProductionyear();
         int carAge = year - productionyear;
         double price = initialPrice;
 
-        if(carAge > 0){
+        if (carAge > 0) {
             for (int i = 0; i < carAge; i++) {
-                    price = price*0.9;
+                price = price * 0.9;
             }
         }
 
-        return (int)price;
+        return (int) price;
     }
 }

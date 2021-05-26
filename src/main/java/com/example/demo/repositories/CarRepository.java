@@ -10,6 +10,7 @@ import java.util.List;
 @Repository
 public interface CarRepository extends MongoRepository<Car, Long> {
     List<Car> findManufacturerByLicensePlate(String licensePlate);
+
     List<Car> findLicensePlateByColor(String color);
 }
 
