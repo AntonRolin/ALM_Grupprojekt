@@ -20,15 +20,6 @@ public class CarService {
         repository.save(car);
     }
 
-    public List<String> getCarsForSale() {
-        // hämtar alla Cars som är till försäljning
-        List<Car> selableCar = repository.findCarByforSale(true);
-
-        // returnerar endast Food namnen i en lista
-        return selableCar.stream()
-                .map(Car::getManufacturer)
-                .collect(Collectors.toList());
-    }
 
     public int getPrice(Car car, int year){
         double initialPrice = car.getInitialPrice();

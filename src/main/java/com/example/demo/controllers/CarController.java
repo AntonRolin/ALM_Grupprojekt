@@ -25,10 +25,7 @@ public class CarController {
         service.saveNewCar(car);
     }
 
-    @GetMapping("/Cars/forsale")
-    public List<String> getSelableCars() {
-        return service.getCarsForSale();
-    }
+
 }
 
 

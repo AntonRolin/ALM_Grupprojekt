@@ -28,9 +28,9 @@ public class CarRepositoryTest {
     @BeforeEach
     void init() {
         carOne = new Car();
-        carOne.setLicensePlate("VLB23C");
-        carOne.setForSale(true);
         carOne.setManufacturer("BMW");
+        carOne.setLicensePlate("VLB23C");
+        carOne.setColor("Red");
         carRepository.save(carOne);
     }
 
@@ -42,10 +42,10 @@ public class CarRepositoryTest {
     }
 
 
-    @Test
-    @DisplayName("Test passed if car is forsale")
-    void findCarByforSale() {
-        List<Car> actual = carRepository.findCarByforSale(true);
-        assertEquals(Collections.singletonList(carOne), actual);
+   @Test
+   @DisplayName("Test passed if car is forsale")
+   void findCarByforSale() {
+        List<Car> actual = carRepository.findLicensePlateByColor(carOne.getColor());
+        assertEquals(carOne.getColor(), actual.get(0).getColor());
     }
 }
