@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DataMongoTest
 public class CarRepositoryTest {
 
-    // vår klass vi vill testa
+/*    // vår klass vi vill testa
     @Autowired
     CarRepository carRepository;
 
@@ -57,5 +57,5 @@ public class CarRepositoryTest {
         assertEquals(Collections.singletonList(carOne), actual);
 
 
-    }
+    }*/
 }
