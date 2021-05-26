@@ -14,7 +14,7 @@ services:
       - mongo
 
   java-app:
-    image: car-app
+    image: docktoranton/car-app:latest
     ports:
       - 8080:8080
     depends_on:
