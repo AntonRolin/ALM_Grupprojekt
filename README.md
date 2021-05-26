@@ -1,11 +1,16 @@
 # ALM_Grupprojekt
 Grupprojekt för ALM kursen
 
+Medlemmar:
+- Anton
+- Salem
+
 
 Projekt info:
-- databas för böcker
-- man ska kunna lägga till, ta bort, lista alla böcker
-- man ska kunna sortera böcker på nån boolean
+- databas för bilförsäljare
+- man ska kunna lägga till och visa alla bilar
+- man ska kunna sortera bilar
+- man ska kunna få pris på en bil beroende på hur gammal den är
 
 
 Git regler:
