@@ -6,7 +6,7 @@ on:
 
 jobs:
   build-and-push:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Get Code
@@ -17,6 +17,9 @@ jobs:
         with:
           distribution: 'adopt'
           java-version: '11'
+
+      - name: Java Version
+        run: java -version
 
       - name: Build Jar file
         run: mvn clean install
@@ -32,10 +35,10 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-app:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/car-app:latest
 
       - name: Upload Jar File
         uses: actions/upload-artifact@v2
         with:
-          name: my-app.jar
+          name: car-app.jar
           path: target/*.jar
