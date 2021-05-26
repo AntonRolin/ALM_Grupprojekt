@@ -26,7 +26,7 @@ public class CarServiceTest {
 
     @Test
     public void getPrice() {
-        int initialPrice = 100000;
+        int initialPrice = 10000;
         int productionyear = 2015;
 
         Car car = new Car();
