@@ -35,7 +35,6 @@ public class CarRepositoryTest {
         assertEquals(carOne.getLicensePlate(), actual.get(0).getLicensePlate());
     }
 
-
     @Test
     @DisplayName("Test passed if car is forsale")
     void findCarByforSale() {
