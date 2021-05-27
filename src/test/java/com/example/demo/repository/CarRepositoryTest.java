@@ -13,14 +13,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DataMongoTest
 public class CarRepositoryTest {
 
-
     @Autowired
     CarRepository carRepository;
 
     private Car carOne;
 
     @BeforeEach
-    void init() {
+    public void init() {
         carOne = new Car();
         carOne.setManufacturer("BMW");
         carOne.setLicensePlate("VLB23C");
@@ -36,8 +35,8 @@ public class CarRepositoryTest {
     }
 
     @Test
-    @DisplayName("Test passed if car is forsale")
-    void findCarByforSale() {
+    @DisplayName("Test passed if license has correct color")
+    void findLicensePlateByColor() {
         List<Car> actual = carRepository.findLicensePlateByColor(carOne.getColor());
         assertEquals(carOne.getColor(), actual.get(0).getColor());
     }
