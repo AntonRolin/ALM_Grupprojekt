@@ -35,7 +35,7 @@ public class CarRepositoryTest {
     }
 
     @Test
-    @DisplayName("Test passed if car is forsale")
+    @DisplayName("Test passed if license has correct color")
     void findLicensePlateByColor() {
         List<Car> actual = carRepository.findLicensePlateByColor(carOne.getColor());
         assertEquals(carOne.getColor(), actual.get(0).getColor());
