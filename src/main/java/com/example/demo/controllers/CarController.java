@@ -24,8 +24,6 @@ public class CarController {
     public void saveNewCar(@RequestBody Car car) {
         service.saveNewCar(car);
     }
-
-
 }
 
 
